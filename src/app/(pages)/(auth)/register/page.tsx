@@ -240,6 +240,7 @@ export default function ReviewerRegister() {
                     type="text"
                     value={formData.firstName}
                     onChange={handleChange}
+                    autoFocus
                     className={`w-full pl-10 pr-10 py-3 border-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 bg-white/50  ${
                       errors.firstName 
                         ? 'border-red-400 bg-red-50/50 shadow-lg shadow-red-100' 

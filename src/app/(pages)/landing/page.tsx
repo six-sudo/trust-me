@@ -1,3 +1,5 @@
+"use client";
+
 import FrontendLayout from '@/app/layouts/FrontendLayout';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,11 +17,11 @@ export default function LandingPage() {
               {/* Headline */}
               <div className="space-y-4">
                 <h1 className="text-[3.25rem] font-bold leading-tight">
-                  <div className="text-blue-800">Get Free Products</div>
-                  <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Share Honest Reviews</span>
+                  <div className="text-blue-800">Connect with Trusted Reviewers</div>
+                  <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Build Authentic Reviews</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Join our community of reviewers, apply for mystery gigs in categories you love, and get rewarded for your authentic feedback.
+                  Join the platform where brands connect with verified reviewers to create authentic, trustworthy reviews that drive real business results.
                 </p>
               </div>
 
@@ -29,7 +31,7 @@ export default function LandingPage() {
               {/* Call-to-Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 {/* r = reviewer, b = brand */}
-                <Link href="/register/reviewer" id="become-reviewer-button">
+                <Link href="/register" id="become-reviewer-button">
                   <CommonButton
                     text="Become a Reviewer"
                     variant="primary"
@@ -41,7 +43,7 @@ export default function LandingPage() {
                   />
                 </Link>
                 <CommonButton
-                  text="For Brand"
+                  text="For Brands"
                   variant="outline"
                   size="lg"
                   shape="rounded"
@@ -75,10 +77,10 @@ export default function LandingPage() {
             <div className="flex justify-center lg:justify-end">
               <div className="animate-scale-in w-full max-w-2xl">
                 <Image
-                  src="/assets/banners/mockup-banner.jpg"
+                  src="/assets/banners/mockup-banner-01.jpg"
                   alt="TrustMe Platform Mockup"
                   width={800}
-                  height={600}
+                  height={400}
                   className="w-full rounded-2xl shadow-floating"
                   priority
                 />
@@ -90,7 +92,7 @@ export default function LandingPage() {
           <div className="mt-50">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Join TrustMe?</h2>
-              <p className="text-xl text-gray-600">We make it easy and rewarding to share your voice.</p>
+              <p className="text-xl text-gray-600">Discover the benefits of being part of our trusted reviewer community</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -103,7 +105,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-blue-800 mb-4">Free Products & Services</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Apply for mystery gigs and receive products worth up to 2,000฿ based on your tier. No purchase necessary.
+                  Get access to free products and services from top brands in exchange for honest, detailed reviews.
                 </p>
               </div>
 
@@ -116,7 +118,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-blue-800 mb-4">Earn Rewards & Level Up</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Complete reviews to advance through Bronze, Silver, and Gold tiers. Unlock better rewards and exclusive opportunities.
+                  Earn points, badges, and exclusive rewards as you build your reputation and complete more reviews.
                 </p>
               </div>
 
@@ -129,7 +131,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-blue-800 mb-4">Build Your Influence</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Grow your social media presence with authentic content. Connect with brands and become a recognized voice in your niche.
+                  Grow your social media presence and become a trusted voice in your niche through authentic reviews.
                 </p>
               </div>
             </div>
@@ -139,7 +141,7 @@ export default function LandingPage() {
           <div id="how-it-works" className="mt-40">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-              <p className="text-xl text-gray-600">Getting started is simple and takes less than 5 minutes.</p>
+              <p className="text-xl text-gray-600">Get started in just a few simple steps</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -150,7 +152,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Sign Up</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Create your account and select your favorite categories
+                  Create your account and complete your profile to get started
                 </p>
               </div>
 
@@ -161,7 +163,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Get Verified</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Complete identity verification to ensure community trust
+                  Complete our verification process to become a trusted reviewer
                 </p>
               </div>
 
@@ -172,7 +174,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Apply for Gigs</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Browse and apply for mystery products you want to try
+                  Browse available review opportunities and apply for products you're interested in
                 </p>
               </div>
 
@@ -183,7 +185,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Review & Earn</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Receive products, post honest reviews, level up your tier
+                  Write honest reviews and earn rewards for your valuable feedback
                 </p>
               </div>
             </div>
@@ -201,9 +203,9 @@ export default function LandingPage() {
                 />
               </div>
               <div className="order-1 md:order-2">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">Real Reviews from<br />Real People</h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">For Brands</h2>
                 <p className="text-lg text-blue-100 mb-8">
-                  Get authentic, detailed feedback and user-generated content for your brand from our curated community of engaged reviewers.
+                  Connect with verified reviewers to get authentic reviews for your products
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
@@ -212,7 +214,7 @@ export default function LandingPage() {
                     </svg>
                     <div>
                       <h3 className="font-semibold mb-1">Verified Reviewers</h3>
-                      <p className="text-blue-100 text-sm">All reviewers are ID-verified with linked social media accounts</p>
+                      <p className="text-blue-100 text-sm">Work with authentic reviewers who have been verified for quality and reliability</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -224,7 +226,7 @@ export default function LandingPage() {
                     </svg>
                     <div>
                       <h3 className="font-semibold mb-1">Targeted Reach</h3>
-                      <p className="text-blue-100 text-sm">Connect with reviewers in specific categories relevant to your product</p>
+                      <p className="text-blue-100 text-sm">Reach your target audience through reviewers who match your ideal customer profile</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -233,7 +235,7 @@ export default function LandingPage() {
                     </svg>
                     <div>
                       <h3 className="font-semibold mb-1">Quality Content</h3>
-                      <p className="text-blue-100 text-sm">Get high-quality photos, videos, and detailed reviews you can use</p>
+                      <p className="text-blue-100 text-sm">Get high-quality, detailed reviews that showcase your products effectively</p>
                     </div>
                   </div>
                 </div>
@@ -250,7 +252,7 @@ export default function LandingPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Start Reviewing?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join thousands of reviewers who are already trying products for free and building their influence.
+              Join thousands of reviewers who are already earning rewards and building their influence
             </p>
             <Link href="/views/pages/register/reviewer-register">
               <CommonButton
