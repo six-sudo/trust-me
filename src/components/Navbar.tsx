@@ -54,7 +54,10 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Left side - Logo with brand name */}
           <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center">
+            <a 
+              href="/" 
+              className="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+            >
               <div className="w-8 h-8 flex items-center justify-center">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
@@ -72,7 +75,7 @@ export default function Navbar() {
                 </svg>
               </div>
               <span className="font-bold text-xl text-blue-800">TrustMe</span>
-            </div>
+            </a>
           </div>
 
           {/* Center - Menu items */}
