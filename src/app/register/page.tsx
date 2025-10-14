@@ -1,5 +1,6 @@
 import FrontendLayout from '@/app/layouts/FrontendLayout';
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 export default function RegisterSelection() {
   return (
@@ -74,6 +75,7 @@ export default function RegisterSelection() {
           </div>
         </div>
       </div>
+      <Footer />
     </FrontendLayout>
   );
 }

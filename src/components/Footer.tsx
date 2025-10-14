@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200 cursor-pointer">
               <div className="w-6 h-6 flex items-center justify-center">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
@@ -26,7 +26,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="font-bold text-lg text-blue-800">Trust me</span>
-            </div>
+            </a>
             <p className="text-sm text-gray-500 leading-relaxed">
               Connecting brands with authentic voices since 2024.
             </p>

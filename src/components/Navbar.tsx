@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import CommonButton from './CommonButton';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,6 +43,12 @@ export default function Navbar() {
         block
       });
     }
+    // Close mobile menu if open
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleSignIn = () => {
+    router.push('/login');
     // Close mobile menu if open
     setIsMobileMenuOpen(false);
   };
@@ -110,9 +117,16 @@ export default function Navbar() {
 
           {/* Right side - Sign in button - Hidden on desktop */}
           <div className="hidden md:flex items-center">
-            <button className="border border-gray-300 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-emerald-600 hover:text-white text-gray-600 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-200 cursor-pointer">
-              Sign in
-            </button>
+            <CommonButton
+              text="Sign in"
+              variant="outline"
+              size="sm"
+              shape="rounded"
+              onClick={handleSignIn}
+              borderWidth="1"
+              borderColor="#d1d5db"
+              className="bg-white text-gray-600 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600 hover:text-white hover:border-emerald-500"
+            />
           </div>
 
           {/* Mobile menu button */}
@@ -173,9 +187,17 @@ export default function Navbar() {
               Getting started
             </button>
             <div className="pt-2">
-              <button className="w-full text-left border border-gray-300 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-emerald-600 hover:text-white text-gray-600 px-4 py-2 rounded-xl text-base font-bold transition-all duration-200 cursor-pointer">
-                Sign in
-              </button>
+              <CommonButton
+                text="Sign in"
+                variant="outline"
+                size="md"
+                shape="rounded"
+                fullWidth
+                onClick={handleSignIn}
+                borderWidth="1"
+                borderColor="#d1d5db"
+                className="hover:bg-gradient-to-r hover:from-emerald-500 hover:to-emerald-600 hover:text-white hover:border-emerald-500"
+              />
             </div>
           </div>
         </div>

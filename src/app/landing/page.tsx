@@ -1,6 +1,7 @@
 import FrontendLayout from '@/app/layouts/FrontendLayout';
 import Image from 'next/image';
 import Link from 'next/link';
+import CommonButton from '@/components/CommonButton';
 
 export default function LandingPage() {
   return (
@@ -14,8 +15,8 @@ export default function LandingPage() {
               {/* Headline */}
               <div className="space-y-4">
                 <h1 className="text-[3.25rem] font-bold leading-tight">
-                  <div className="text-blue-800">Get Free Products.</div>
-                  <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent"> Share Honest Reviews.</span>
+                  <div className="text-blue-800">Get Free Products</div>
+                  <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Share Honest Reviews</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Join our community of reviewers, apply for mystery gigs in categories you love, and get rewarded for your authentic feedback.
@@ -28,16 +29,29 @@ export default function LandingPage() {
               {/* Call-to-Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 {/* r = reviewer, b = brand */}
-                <Link 
-                  href="/register/reviewer"
-                  id="become-reviewer-button"
-                  className="bg-gradient-to-r from-blue-400 to-blue-800 hover:from-blue-500 hover:to-blue-900 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer text-center"
-                >
-                  Become a Reviewer
+                <Link href="/register/reviewer" id="become-reviewer-button">
+                  <CommonButton
+                    text="Become a Reviewer"
+                    variant="primary"
+                    size="lg"
+                    shape="rounded"
+                    gradient={true}
+                    shadow="lg"
+                    className="text-center"
+                  />
                 </Link>
-                <button className="border-1 border-gray-300 hover:border-transparent text-gray-700 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-200 hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-800 hover:text-white cursor-pointer">
-                  Browse Gigs
-                </button>
+                <CommonButton
+                  text="For Brand"
+                  variant="outline"
+                  size="lg"
+                  shape="rounded"
+                  backgroundColor="#f8fafc"
+                  textColor="#374151"
+                  borderColor="#d1d5db"
+                  hoverBackgroundColor="linear-gradient(to right, #60a5fa, #1d4ed8)"
+                  hoverTextColor="#ffffff"
+                  className="border border-gray-300"
+                />
               </div>
 
               {/* Statistics */}
@@ -75,8 +89,8 @@ export default function LandingPage() {
           {/* Why Join Trust me? Section */}
           <div className="mt-50">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Join Trust me?</h2>
-              <p className="text-xl text-gray-600">We make it easy and rewarding to share your voice</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Join TrustMe?</h2>
+              <p className="text-xl text-gray-600">We make it easy and rewarding to share your voice.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -125,7 +139,7 @@ export default function LandingPage() {
           <div id="how-it-works" className="mt-40">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-              <p className="text-xl text-gray-600">Getting started is simple and takes less than 5 minutes</p>
+              <p className="text-xl text-gray-600">Getting started is simple and takes less than 5 minutes.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -187,7 +201,7 @@ export default function LandingPage() {
                 />
               </div>
               <div className="order-1 md:order-2">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">Real Reviews from<br />Real People.</h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">Real Reviews from<br />Real People</h2>
                 <p className="text-lg text-blue-100 mb-8">
                   Get authentic, detailed feedback and user-generated content for your brand from our curated community of engaged reviewers.
                 </p>
@@ -238,11 +252,16 @@ export default function LandingPage() {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Join thousands of reviewers who are already trying products for free and building their influence.
             </p>
-            <Link 
-              href="/views/pages/register/reviewer-register" 
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-blue-400 to-blue-800 text-white hover:opacity-90 shadow-elevated font-semibold h-14 rounded-xl px-10 text-lg"
-            >
-              Get Started Today
+            <Link href="/views/pages/register/reviewer-register">
+              <CommonButton
+                text="Get Started Today"
+                variant="primary"
+                size="lg"
+                shape="rounded"
+                gradient={true}
+                shadow="lg"
+                className="h-14 px-10"
+              />
             </Link>
           </div>
         </section>
