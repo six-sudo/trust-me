@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning>
-      <body>
+      <body className="bg-white dark:bg-gray-900">
         <ThemeProvider>
           {children}
         </ThemeProvider>
