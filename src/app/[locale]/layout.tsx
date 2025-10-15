@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export const metadata: Metadata = {

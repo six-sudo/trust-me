@@ -1,9 +1,12 @@
 import React from 'react';
 import Logo from '@/components/Logo';
+import { useBrand } from '@/contexts/BrandProvider';
 
 export default function Footer() {
+  const { brandName } = useBrand();
+  
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -115,7 +118,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="text-center">
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            © 2024 Trust me. All rights reserved.
+            © 2024 {brandName}. All rights reserved.
           </p>
         </div>
       </div>

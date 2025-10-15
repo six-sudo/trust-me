@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShield } from '@fortawesome/free-solid-svg-icons';
+import { useBrand } from '@/contexts/BrandProvider';
 
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -17,6 +18,7 @@ export default function Logo({
   href = '/',
   onClick
 }: LogoProps) {
+  const { brandName } = useBrand();
   const sizeClasses = {
     sm: {
       icon: 'h-4 w-4',
@@ -44,7 +46,7 @@ export default function Logo({
       </div>
       {showText && (
         <span className={`font-bold ${currentSize.text} text-blue-800 dark:text-gray-100`}>
-          TrustMe
+          {brandName}
         </span>
       )}
     </div>

@@ -112,7 +112,7 @@ export default function Navbar() {
   };
   return (
     <nav 
-      className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50"
+      className="bg-white dark:bg-black/80 shadow-sm border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50"
       style={{ backdropFilter: 'blur(2px)', WebkitBackdropFilter: 'blur(2px)' }}
     >
       <div className="max-w-7xl mx-auto ">
@@ -177,7 +177,7 @@ export default function Navbar() {
             <div className="relative" ref={dotMenuRef}>
               <button
                 onClick={toggleDotMenu}
-                className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer"
+                className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer"
                 aria-label="More options"
               >
                 <FontAwesomeIcon icon={faEllipsisVertical} className="w-5 h-5" />
@@ -185,11 +185,11 @@ export default function Navbar() {
               
               {/* Dropdown menu */}
               {isDotMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-md shadow-lg border border-gray-200 dark:border-gray-800 z-50">
+                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-black rounded-md shadow-lg border border-gray-200 dark:border-gray-800 z-50">
                   {/* Theme Toggle */}
                   <button
                     onClick={toggleTheme}
-                    className="flex items-center justify-between w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 cursor-pointer"
+                    className="flex items-center justify-between w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 cursor-pointer "
                   >
                     <div className="flex items-center">
                       <FontAwesomeIcon 

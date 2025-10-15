@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from "@/components/theme-provider"
+import { BrandProvider } from "@/contexts/BrandProvider"
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -14,10 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning>
-      <body className="bg-white dark:bg-gray-900">
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+      <body className="bg-white dark:bg-black">
+        <BrandProvider>
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
+        </BrandProvider>
       </body>
     </html>
   );

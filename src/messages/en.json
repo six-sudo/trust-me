@@ -17,7 +17,7 @@
       }
     },
     "whyJoin": {
-      "title": "Why Join TrustMe?",
+      "title": "Why Join {brandName}?",
       "subtitle": "Discover the benefits of being part of our trusted reviewer community",
       "cards": {
         "freeProducts": {
@@ -93,7 +93,7 @@
       }
     },
     "whyChoose": {
-      "title": "Why Choose TrustMe for Your Brand?",
+      "title": "Why Choose {brandName} for Your Brand?",
       "subtitle": "Discover how our platform helps brands build authentic reviews and grow their business",
       "features": {
         "verifiedReviewers": {
@@ -190,30 +190,30 @@
     },
     "successStories": {
       "title": "Success Stories",
-      "subtitle": "See how brands are growing with TrustMe",
+      "subtitle": "See how brands are growing with {brandName}",
       "testimonials": {
         "techcorp": {
-          "quote": "TrustMe helped us increase our product reviews by 300% and significantly improved our conversion rates. The quality of reviewers is outstanding."
+          "quote": "{brandName} helped us increase our product reviews by 300% and significantly improved our conversion rates. The quality of reviewers is outstanding."
         },
         "fashionforward": {
           "quote": "The targeted reach feature allowed us to connect with fashion influencers who truly understood our brand. The results exceeded our expectations."
         },
         "healthplus": {
-          "quote": "As a health brand, authenticity is crucial. TrustMe's verified reviewers provided genuine feedback that built trust with our customers."
+          "quote": "As a health brand, authenticity is crucial. {brandName}'s verified reviewers provided genuine feedback that built trust with our customers."
         }
       }
     },
     "cta": {
       "title": "Ready to Grow Your Brand?",
-      "subtitle": "Join hundreds of brands already using TrustMe to build authentic reviews and grow their business",
+      "subtitle": "Join hundreds of brands already using {brandName} to build authentic reviews and grow their business",
       "buttons": {
         "getStarted": "Get Started Today",
         "contactSales": "Contact Sales"
       }
     },
     "requestModal": {
-      "title": "Request to Use TrustMe",
-      "description": "Fill out the form below and we'll get back to you within 24 hours to discuss how TrustMe can help grow your brand.",
+      "title": "Request to Use {brandName}",
+      "description": "Fill out the form below and we'll get back to you within 24 hours to discuss how {brandName} can help grow your brand.",
       "submit": "Submit Request",
       "submitting": "Submitting...",
       "cancel": "Cancel",

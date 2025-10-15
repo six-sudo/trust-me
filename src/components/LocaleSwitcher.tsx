@@ -80,7 +80,7 @@ export default function LocaleSwitcher({ className = "", isMobile = false }: Loc
 
   const baseClasses = isMobile 
     ? "flex items-center justify-between w-full px-4 py-3 text-base font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 cursor-pointer rounded-lg border border-transparent hover:border-blue-100"
-    : "flex items-center justify-between w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200 cursor-pointer";
+    : "flex items-center justify-between w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 cursor-pointer ";
 
   return (
     <div className={`relative ${className}`} ref={dropdownRef}>
@@ -105,7 +105,7 @@ export default function LocaleSwitcher({ className = "", isMobile = false }: Loc
             <button
               key={language.code}
               onClick={() => switchLanguage(language.code)}
-              className={`flex items-center justify-between w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200 cursor-pointer ${
+              className={`flex items-center justify-between w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 cursor-pointer  ${
                 language.code === locale ? 'bg-blue-50 text-blue-700' : ''
               }`}
             >

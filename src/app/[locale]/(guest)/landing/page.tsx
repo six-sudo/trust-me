@@ -1,17 +1,19 @@
 "use client";
 
-import FrontendLayout from '@/app/[locale]/layouts/FrontendLayout';
+import FrontendLayout from '@/app/[locale]/layouts/guest-layout';
 import Image from 'next/image';
 import Link from 'next/link';
 import CommonButton from '@/components/CommonButton';
 import { useTranslations } from 'next-intl';
 import { ROUTES } from '@/constants/routes';
+import { useBrand } from '@/contexts/BrandProvider';
 
 export default function LandingPage() {
   const t = useTranslations('landing');
+  const { brandName } = useBrand();
 
   return (
-    <FrontendLayout className="bg-white dark:bg-gray-900 py-6 sm:py-20 md:py-24 lg:py-16 xl:py-20">
+    <FrontendLayout className="bg-white dark:bg-black py-6 sm:py-20 md:py-24 lg:py-16 xl:py-20">
         {/* Main Content container*/}
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           {/* Main Content */}
@@ -97,7 +99,7 @@ export default function LandingPage() {
           {/* Why Join Trust me? Section */}
           <div className="mt-50">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">{t('whyJoin.title')}</h2>
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">{t('whyJoin.title', { brandName })}</h2>
               <p className="text-xl text-gray-600 dark:text-gray-400">{t('whyJoin.subtitle')}</p>
             </div>
 
@@ -198,7 +200,7 @@ export default function LandingPage() {
           </div>
         </div>
         {/* Real Reviews from Real People Section */}
-        <section id="brands" className="py-20 bg-blue-900 dark:bg-gray-800 text-white mt-16">
+        <section id="brands" className="py-20 bg-blue-900 dark:bg-gray-900 text-white mt-16">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
@@ -254,7 +256,7 @@ export default function LandingPage() {
         </section>
         
         {/* Ready to Start Reviewing Section */}
-        <section id="getting-started" className="py-20 bg-muted/30 dark:bg-gray-800/50">
+        <section id="getting-started" className="py-20 bg-muted/30 dark:bg-black">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">{t('readyToStart.title')}</h2>
             <p className="text-lg text-muted-foreground dark:text-gray-300 mb-8 max-w-2xl mx-auto">
