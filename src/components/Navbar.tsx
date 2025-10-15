@@ -34,7 +34,8 @@ export default function Navbar() {
 
   // Handle hash scrolling when page loads
   useEffect(() => {
-    if (pathname === '/' && window.location.hash) {
+    const isOnLandingPage = pathname === '/' || pathname === '/en' || pathname === '/th';
+    if (isOnLandingPage && window.location.hash) {
       const elementId = window.location.hash.substring(1);
       setTimeout(() => {
         const element = document.getElementById(elementId);
@@ -65,10 +66,15 @@ export default function Navbar() {
     };
   }, [isDotMenuOpen]);
 
-  const scrollToElement = (elementId: string, block: 'start' | 'center' | 'end' = 'start') => {
-    // If not on home page, navigate to landing page with hash
-    if (pathname !== '/') {
-      router.push(`/#${elementId}`);
+  const scrollToElement = (elementId: string, block: 'center' | 'start' | 'end' = 'center') => {
+    // Check if we're on the landing page (with or without locale prefix)
+    const isOnLandingPage = pathname === '/' || pathname === '/en' || pathname === '/th';
+    
+    // If not on landing page, navigate to landing page with hash
+    if (!isOnLandingPage) {
+      // Extract current locale from pathname or default to 'en'
+      const currentLocale = pathname.startsWith('/th') ? 'th' : 'en';
+      router.push(`/${currentLocale}#${elementId}`);
       return;
     }
     
@@ -122,7 +128,7 @@ export default function Navbar() {
                 {t('menu.howItWorks')}
               </button>
               <button
-                onClick={() => scrollToElement('getting-started', 'start')}
+                onClick={() => scrollToElement('getting-started', 'center')}
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-bold transition-colors duration-200 cursor-pointer"
               >
                 {t('menu.gettingStarted')}
@@ -219,19 +225,19 @@ export default function Navbar() {
                 {t('menu.forReviewers')}
               </button>
               <button
-                onClick={() => scrollToElement('brands', 'start')}
+                onClick={() => scrollToElement('brands', 'center')}
                 className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
               >
                 {t('menu.forBrands')}
               </button>
               <button
-                onClick={() => scrollToElement('how-it-works', 'start')}
+                onClick={() => scrollToElement('how-it-works', 'center')}
                 className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
               >
                 {t('menu.howItWorks')}
               </button>
               <button
-                onClick={() => scrollToElement('getting-started', 'start')}
+                onClick={() => scrollToElement('getting-started', 'center')}
                 className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
               >
                 {t('menu.gettingStarted')}
