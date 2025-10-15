@@ -1,5 +1,6 @@
 import { getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
+import { ThemeProvider } from '@/components/theme-provider';
 import type { Metadata } from 'next';
 
 interface LocaleLayoutProps {

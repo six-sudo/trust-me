@@ -81,6 +81,184 @@
       "button": "Get Started Today"
     }
   },
+  "brands": {
+    "hero": {
+      "title": {
+        "line1": "Connect with Trusted Reviewers",
+        "line2": "Build Authentic Reviews"
+      },
+      "subtitle": "Join the platform where brands connect with verified reviewers to create authentic, trustworthy reviews that drive real business results.",
+      "buttons": {
+        "getStarted": "Get Started"
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose TrustMe for Your Brand?",
+      "subtitle": "Discover how our platform helps brands build authentic reviews and grow their business",
+      "features": {
+        "verifiedReviewers": {
+          "title": "Verified Reviewers",
+          "description": "Work with authentic reviewers who have been verified for quality and reliability"
+        },
+        "qualityContent": {
+          "title": "Quality Content",
+          "description": "Get high-quality, detailed reviews that showcase your products effectively"
+        },
+        "targetedReach": {
+          "title": "Targeted Reach",
+          "description": "Reach your target audience through reviewers who match your ideal customer profile"
+        },
+        "analytics": {
+          "title": "Advanced Analytics",
+          "description": "Track campaign performance with detailed analytics and insights"
+        },
+        "secure": {
+          "title": "Secure Platform",
+          "description": "Your data and campaigns are protected with enterprise-grade security"
+        },
+        "support": {
+          "title": "24/7 Support",
+          "description": "Get dedicated support from our team whenever you need help"
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works for Brands",
+      "subtitle": "Get started with authentic reviews in just a few simple steps",
+      "steps": {
+        "createCampaign": {
+          "title": "Create Campaign",
+          "description": "Set up your review campaign with target audience and requirements"
+        },
+        "selectReviewers": {
+          "title": "Select Reviewers",
+          "description": "Choose from our pool of verified reviewers that match your criteria"
+        },
+        "monitorProgress": {
+          "title": "Monitor Progress",
+          "description": "Track your campaign progress and reviewer engagement in real-time"
+        },
+        "getResults": {
+          "title": "Get Results",
+          "description": "Receive authentic reviews and detailed analytics for your products"
+        }
+      }
+    },
+    "pricing": {
+      "title": "Simple, Transparent Pricing",
+      "subtitle": "Choose the plan that fits your business needs",
+      "plans": {
+        "starter": {
+          "name": "Starter",
+          "description": "Perfect for small businesses",
+          "price": "99",
+          "period": "month",
+          "features": {
+            "reviews": "Up to 50 reviews per month",
+            "analytics": "Basic analytics dashboard",
+            "support": "Email support"
+          },
+          "button": "Get Started"
+        },
+        "professional": {
+          "name": "Professional",
+          "description": "Ideal for growing businesses",
+          "price": "299",
+          "period": "month",
+          "popular": "Most Popular",
+          "features": {
+            "reviews": "Up to 200 reviews per month",
+            "analytics": "Advanced analytics & insights",
+            "support": "Priority email & chat support",
+            "priority": "Priority reviewer matching"
+          },
+          "button": "Get Started"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "description": "For large organizations",
+          "price": "Custom",
+          "features": {
+            "reviews": "Unlimited reviews",
+            "analytics": "Custom analytics & reporting",
+            "support": "Dedicated account manager",
+            "custom": "Custom integrations & features"
+          },
+          "button": "Contact Sales"
+        }
+      }
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "subtitle": "See how brands are growing with TrustMe",
+      "testimonials": {
+        "techcorp": {
+          "quote": "TrustMe helped us increase our product reviews by 300% and significantly improved our conversion rates. The quality of reviewers is outstanding."
+        },
+        "fashionforward": {
+          "quote": "The targeted reach feature allowed us to connect with fashion influencers who truly understood our brand. The results exceeded our expectations."
+        },
+        "healthplus": {
+          "quote": "As a health brand, authenticity is crucial. TrustMe's verified reviewers provided genuine feedback that built trust with our customers."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Grow Your Brand?",
+      "subtitle": "Join hundreds of brands already using TrustMe to build authentic reviews and grow their business",
+      "buttons": {
+        "getStarted": "Get Started Today",
+        "contactSales": "Contact Sales"
+      }
+    },
+    "requestModal": {
+      "title": "Request to Use TrustMe",
+      "description": "Fill out the form below and we'll get back to you within 24 hours to discuss how TrustMe can help grow your brand.",
+      "submit": "Submit Request",
+      "submitting": "Submitting...",
+      "cancel": "Cancel",
+      "form": {
+        "companyName": "Company Name",
+        "companyNamePlaceholder": "Enter your company name",
+        "contactName": "Contact Name",
+        "contactNamePlaceholder": "Enter your full name",
+        "email": "Email Address",
+        "emailPlaceholder": "Enter your email address",
+        "phone": "Phone Number",
+        "phonePlaceholder": "Enter your phone number",
+        "website": "Website",
+        "websitePlaceholder": "https://yourwebsite.com",
+        "industry": "Industry",
+        "industryPlaceholder": "Select your industry",
+        "industries": {
+          "technology": "Technology",
+          "fashion": "Fashion & Apparel",
+          "health": "Health & Wellness",
+          "food": "Food & Beverage",
+          "beauty": "Beauty & Cosmetics",
+          "travel": "Travel & Tourism",
+          "finance": "Finance & Banking",
+          "education": "Education",
+          "other": "Other"
+        },
+        "monthlyBudget": "Monthly Budget",
+        "monthlyBudgetPlaceholder": "Select your monthly budget",
+        "budgets": {
+          "under1k": "Under $1,000",
+          "1k5k": "$1,000 - $5,000",
+          "5k10k": "$5,000 - $10,000",
+          "10k25k": "$10,000 - $25,000",
+          "25k50k": "$25,000 - $50,000",
+          "over50k": "Over $50,000"
+        },
+        "reviewGoals": "Review Goals",
+        "reviewGoalsPlaceholder": "Tell us about your review goals and what you hope to achieve...",
+        "message": "Additional Message",
+        "messagePlaceholder": "Any additional information you'd like to share...",
+        "note": "We'll review your request and contact you within 24 hours to discuss the best solution for your brand."
+      }
+    }
+  },
   "navbar": {
     "menu": {
       "forReviewers": "For Reviewers",
@@ -90,6 +268,7 @@
     },
     "buttons": {
       "signIn": "Sign In",
+      "signUp": "Sign Up",
       "signOut": "Sign Out"
     },
     "settings": {

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CommonButton from '@/components/CommonButton';
 import { useTranslations } from 'next-intl';
+import { ROUTES } from '@/constants/routes';
 
 export default function LandingPage() {
   const t = useTranslations('landing');
@@ -34,7 +35,7 @@ export default function LandingPage() {
               {/* Call-to-Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 {/* r = reviewer, b = brand */}
-                <Link href="/register" id="become-reviewer-button">
+                <Link href={ROUTES.AUTH.REGISTER} id="become-reviewer-button" className="w-full sm:w-auto">
                   <CommonButton
                     text={t('hero.buttons.becomeReviewer')}
                     variant="primary"
@@ -42,21 +43,23 @@ export default function LandingPage() {
                     shape="rounded"
                     gradient={true}
                     shadow="lg"
-                    className="text-center"
+                    className="text-center w-full sm:w-auto"
                   />
                 </Link>
-                <CommonButton
-                  text={t('hero.buttons.forBrands')}
-                  variant="outline"
-                  size="lg"
-                  shape="rounded"
-                  backgroundColor="#f8fafc"
-                  textColor="#374151"
-                  borderColor="#d1d5db"
-                  hoverBackgroundColor="linear-gradient(to right, #60a5fa, #1d4ed8)"
-                  hoverTextColor="#ffffff"
-                  className="border border-gray-300"
-                />
+                <Link href={ROUTES.BRANDS} className="w-full sm:w-auto">
+                  <CommonButton
+                    text={t('hero.buttons.forBrands')}
+                    variant="outline"
+                    size="lg"
+                    shape="rounded"
+                    backgroundColor="#f8fafc"
+                    textColor="#374151"
+                    borderColor="#d1d5db"
+                    hoverBackgroundColor="linear-gradient(to right, #60a5fa, #1d4ed8)"
+                    hoverTextColor="#ffffff"
+                    className="border border-gray-300 w-full sm:w-auto"
+                  />
+                </Link>
               </div>
 
               {/* Statistics */}
@@ -242,9 +245,9 @@ export default function LandingPage() {
                     </div>
                   </div>
                 </div>
-                <a href="mailto:brands@trustme.com" className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-white text-blue-900 hover:bg-blue-50 h-14 rounded-xl px-10 text-lg">
+                <Link href={ROUTES.BRANDS} className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-white text-blue-900 hover:bg-blue-50 h-14 rounded-xl px-10 text-lg">
                   {t('forBrands.button')}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -257,7 +260,7 @@ export default function LandingPage() {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               {t('readyToStart.subtitle')}
             </p>
-            <Link href="/views/pages/register/reviewer-register">
+            <Link href={ROUTES.AUTH.REGISTER}>
               <CommonButton
                 text={t('readyToStart.button')}
                 variant="primary"

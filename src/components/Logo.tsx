@@ -39,11 +39,11 @@ export default function Logo({
       <div className={`flex items-center justify-center ${currentSize.icon}`}>
         <FontAwesomeIcon 
           icon={faShield} 
-          className={`${currentSize.icon} text-blue-600`}
+          className={`${currentSize.icon} text-blue-600 dark:text-gray-100`}
         />
       </div>
       {showText && (
-        <span className={`font-bold ${currentSize.text} text-blue-800`}>
+        <span className={`font-bold ${currentSize.text} text-blue-800 dark:text-gray-100`}>
           TrustMe
         </span>
       )}
@@ -64,7 +64,7 @@ export default function Logo({
   return (
     <a 
       href={href} 
-      className="hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+      className="hover:opacity-80 transition-opacity duration-200 cursor-pointer "
     >
       {logoContent}
     </a>
