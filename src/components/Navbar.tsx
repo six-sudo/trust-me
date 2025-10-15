@@ -3,19 +3,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsisVertical, faSun, faMoon, faGlobe, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisVertical, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { useTranslations } from 'next-intl';
 import CommonButton from '@/components/CommonButton';
 import Logo from '@/components/Logo';
+import LocaleSwitcher from '@/components/LocaleSwitcher';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDotMenuOpen, setIsDotMenuOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [language, setLanguage] = useState<'en' | 'th'>('en');
   
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'th' : 'en');
-  };
+  const t = useTranslations('navbar');
   const pathname = usePathname();
   const router = useRouter();
   const dotMenuRef = useRef<HTMLDivElement>(null);
@@ -108,25 +107,25 @@ export default function Navbar() {
                 onClick={() => scrollToElement('become-reviewer-button', 'center')}
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-bold transition-colors duration-200 cursor-pointer"
               >
-                For Reviewers
+                {t('menu.forReviewers')}
               </button>
               <button
                 onClick={() => scrollToElement('brands', 'center')}
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-bold transition-colors duration-200 cursor-pointer"
               >
-                For Brands
+                {t('menu.forBrands')}
               </button>
               <button
                 onClick={() => scrollToElement('how-it-works', 'center')}
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-bold transition-colors duration-200 cursor-pointer"
               >
-                How It Works
+                {t('menu.howItWorks')}
               </button>
               <button
                 onClick={() => scrollToElement('getting-started', 'start')}
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-bold transition-colors duration-200 cursor-pointer"
               >
-                Getting Started
+                {t('menu.gettingStarted')}
               </button>
             </div>
           </div>
@@ -134,7 +133,7 @@ export default function Navbar() {
           {/* Right side - Sign in button and 3-dot menu - Hidden on desktop */}
           <div className="hidden md:flex items-center space-x-2">
             <CommonButton
-              text="Sign In"
+              text={t('buttons.signIn')}
               variant="outline"
               size="sm"
               shape="rounded"
@@ -167,22 +166,13 @@ export default function Navbar() {
                         icon={theme === 'light' ? faSun : faMoon} 
                         className="w-4 h-4 mr-2" 
                       />
-                      Theme
+                      
                     </div>
                     <span className="text-xs text-gray-500 capitalize">{theme}</span>
                   </button>
                   
-                  {/* Language Toggle */}
-                  <button
-                    onClick={toggleLanguage}
-                    className="flex items-center justify-between w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
-                  >
-                    <div className="flex items-center">
-                      <FontAwesomeIcon icon={faGlobe} className="w-4 h-4 mr-2" />
-                      Language
-                    </div>
-                    <span className="text-xs text-gray-500 uppercase">{language}</span>
-                  </button>
+                  {/* Language Switcher */}
+                  <LocaleSwitcher />
 
                 </div>
               )}
@@ -226,30 +216,30 @@ export default function Navbar() {
                 onClick={() => scrollToElement('become-reviewer-button', 'center')}
                 className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
               >
-                For Reviewers
+                {t('menu.forReviewers')}
               </button>
               <button
                 onClick={() => scrollToElement('brands', 'start')}
                 className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
               >
-                For Brands
+                {t('menu.forBrands')}
               </button>
               <button
                 onClick={() => scrollToElement('how-it-works', 'start')}
                 className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
               >
-                How It Works
+                {t('menu.howItWorks')}
               </button>
               <button
                 onClick={() => scrollToElement('getting-started', 'start')}
                 className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
               >
-                Getting Started
+                {t('menu.gettingStarted')}
               </button>
             </div>
             <div className="pt-4 border-t border-gray-100 space-y-2">
               <CommonButton
-                text="Sign In"
+                text={t('buttons.signIn')}
                 variant="outline"
                 size="md"
                 shape="rounded"
@@ -269,7 +259,7 @@ export default function Navbar() {
                   }}
                   className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
                 >
-                  Profile
+                  {t('settings.profile')}
                 </button>
                 <button
                   onClick={() => {
@@ -278,7 +268,7 @@ export default function Navbar() {
                   }}
                   className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
                 >
-                  Settings
+                  {t('settings.settings')}
                 </button>
                 <button
                   onClick={() => {
@@ -287,7 +277,7 @@ export default function Navbar() {
                   }}
                   className="text-gray-800 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-blue-100"
                 >
-                  Help & Support
+                  {t('settings.helpSupport')}
                 </button>
                 
                 <hr className="my-2" />
@@ -305,25 +295,13 @@ export default function Navbar() {
                       icon={theme === 'light' ? faSun : faMoon} 
                       className="w-4 h-4 mr-2 text-gray-600" 
                     />
-                    Theme
+                    
                   </div>
                   <span className="text-xs text-gray-500 capitalize">{theme}</span>
                 </button>
                 
-                {/* Mobile Language Toggle */}
-                <button
-                  onClick={() => {
-                    toggleLanguage();
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="flex items-center justify-between w-full px-4 py-3 text-base font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 cursor-pointer rounded-lg border border-transparent hover:border-blue-100"
-                >
-                  <div className="flex items-center">
-                    <FontAwesomeIcon icon={faGlobe} className="w-4 h-4 mr-2 text-gray-600" />
-                    Language
-                  </div>
-                  <span className="text-xs text-gray-500 uppercase">{language}</span>
-                </button>
+                {/* Mobile Language Switcher */}
+                <LocaleSwitcher isMobile={true} />
                 
                 <hr className="my-2" />
                 <button
@@ -333,7 +311,7 @@ export default function Navbar() {
                   }}
                   className="text-red-600 hover:text-red-700 hover:bg-red-50 block px-4 py-3 text-base font-semibold transition-all duration-200 cursor-pointer w-full text-left rounded-lg border border-transparent hover:border-red-100"
                 >
-                  Sign Out
+                  {t('buttons.signOut')}
                 </button>
               </div>
             </div>

@@ -1,11 +1,14 @@
 "use client";
 
-import FrontendLayout from '@/app/layouts/FrontendLayout';
+import FrontendLayout from '@/app/[locale]/layouts/FrontendLayout';
 import Image from 'next/image';
 import Link from 'next/link';
 import CommonButton from '@/components/CommonButton';
+import { useTranslations } from 'next-intl';
 
 export default function LandingPage() {
+  const t = useTranslations('landing');
+
   return (
     <FrontendLayout className="bg-white py-6 sm:py-20 md:py-24 lg:py-16 xl:py-20">
         {/* Main Content container*/}
@@ -17,11 +20,11 @@ export default function LandingPage() {
               {/* Headline */}
               <div className="space-y-4">
                 <h1 className="text-[3.25rem] font-bold leading-tight">
-                  <div className="text-blue-800">Connect with Trusted Reviewers</div>
-                  <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Build Authentic Reviews</span>
+                  <div className="text-blue-800">{t('hero.title.line1')}</div>
+                  <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">{t('hero.title.line2')}</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Join the platform where brands connect with verified reviewers to create authentic, trustworthy reviews that drive real business results.
+                  {t('hero.subtitle')}
                 </p>
               </div>
 
@@ -33,7 +36,7 @@ export default function LandingPage() {
                 {/* r = reviewer, b = brand */}
                 <Link href="/register" id="become-reviewer-button">
                   <CommonButton
-                    text="Become a Reviewer"
+                    text={t('hero.buttons.becomeReviewer')}
                     variant="primary"
                     size="lg"
                     shape="rounded"
@@ -43,7 +46,7 @@ export default function LandingPage() {
                   />
                 </Link>
                 <CommonButton
-                  text="For Brands"
+                  text={t('hero.buttons.forBrands')}
                   variant="outline"
                   size="lg"
                   shape="rounded"
@@ -60,15 +63,15 @@ export default function LandingPage() {
               <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-gray-200">
                 <div>
                   <div className="text-3xl font-bold text-blue-800 mb-1">5000+</div>
-                  <div className="text-sm text-gray-500">Active Reviewers</div>
+                  <div className="text-sm text-gray-500">{t('hero.stats.activeReviewers')}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-green-500 mb-1">200+</div>
-                  <div className="text-sm text-gray-500">Partner Brands</div>
+                  <div className="text-sm text-gray-500">{t('hero.stats.partnerBrands')}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-green-600 mb-1">15K+</div>
-                  <div className="text-sm text-gray-500">Reviews Posted</div>
+                  <div className="text-sm text-gray-500">{t('hero.stats.reviewsPosted')}</div>
                 </div>
               </div>
             </div>
@@ -91,8 +94,8 @@ export default function LandingPage() {
           {/* Why Join Trust me? Section */}
           <div className="mt-50">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Join TrustMe?</h2>
-              <p className="text-xl text-gray-600">Discover the benefits of being part of our trusted reviewer community</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('whyJoin.title')}</h2>
+              <p className="text-xl text-gray-600">{t('whyJoin.subtitle')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -103,9 +106,9 @@ export default function LandingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-blue-800 mb-4">Free Products & Services</h3>
+                <h3 className="text-xl font-bold text-blue-800 mb-4">{t('whyJoin.cards.freeProducts.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Get access to free products and services from top brands in exchange for honest, detailed reviews.
+                  {t('whyJoin.cards.freeProducts.description')}
                 </p>
               </div>
 
@@ -116,9 +119,9 @@ export default function LandingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-blue-800 mb-4">Earn Rewards & Level Up</h3>
+                <h3 className="text-xl font-bold text-blue-800 mb-4">{t('whyJoin.cards.earnRewards.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Earn points, badges, and exclusive rewards as you build your reputation and complete more reviews.
+                  {t('whyJoin.cards.earnRewards.description')}
                 </p>
               </div>
 
@@ -129,9 +132,9 @@ export default function LandingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-blue-800 mb-4">Build Your Influence</h3>
+                <h3 className="text-xl font-bold text-blue-800 mb-4">{t('whyJoin.cards.buildInfluence.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Grow your social media presence and become a trusted voice in your niche through authentic reviews.
+                  {t('whyJoin.cards.buildInfluence.description')}
                 </p>
               </div>
             </div>
@@ -140,8 +143,8 @@ export default function LandingPage() {
           {/* How It Works Section */}
           <div id="how-it-works" className="mt-40">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-              <p className="text-xl text-gray-600">Get started in just a few simple steps</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('howItWorks.title')}</h2>
+              <p className="text-xl text-gray-600">{t('howItWorks.subtitle')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -150,9 +153,9 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">1</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Sign Up</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('howItWorks.steps.signUp.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Create your account and complete your profile to get started
+                  {t('howItWorks.steps.signUp.description')}
                 </p>
               </div>
 
@@ -161,9 +164,9 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">2</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Get Verified</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('howItWorks.steps.getVerified.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Complete our verification process to become a trusted reviewer
+                  {t('howItWorks.steps.getVerified.description')}
                 </p>
               </div>
 
@@ -172,9 +175,9 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">3</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Apply for Gigs</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('howItWorks.steps.applyForGigs.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Browse available review opportunities and apply for products you're interested in
+                  {t('howItWorks.steps.applyForGigs.description')}
                 </p>
               </div>
 
@@ -183,9 +186,9 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">4</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Review & Earn</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('howItWorks.steps.reviewAndEarn.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Write honest reviews and earn rewards for your valuable feedback
+                  {t('howItWorks.steps.reviewAndEarn.description')}
                 </p>
               </div>
             </div>
@@ -203,9 +206,9 @@ export default function LandingPage() {
                 />
               </div>
               <div className="order-1 md:order-2">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">For Brands</h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">{t('forBrands.title')}</h2>
                 <p className="text-lg text-blue-100 mb-8">
-                  Connect with verified reviewers to get authentic reviews for your products
+                  {t('forBrands.subtitle')}
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
@@ -213,8 +216,8 @@ export default function LandingPage() {
                       <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
                     </svg>
                     <div>
-                      <h3 className="font-semibold mb-1">Verified Reviewers</h3>
-                      <p className="text-blue-100 text-sm">Work with authentic reviewers who have been verified for quality and reliability</p>
+                      <h3 className="font-semibold mb-1">{t('forBrands.features.verifiedReviewers.title')}</h3>
+                      <p className="text-blue-100 text-sm">{t('forBrands.features.verifiedReviewers.description')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -225,8 +228,8 @@ export default function LandingPage() {
                       <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                     </svg>
                     <div>
-                      <h3 className="font-semibold mb-1">Targeted Reach</h3>
-                      <p className="text-blue-100 text-sm">Reach your target audience through reviewers who match your ideal customer profile</p>
+                      <h3 className="font-semibold mb-1">{t('forBrands.features.targetedReach.title')}</h3>
+                      <p className="text-blue-100 text-sm">{t('forBrands.features.targetedReach.description')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -234,13 +237,13 @@ export default function LandingPage() {
                       <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
                     </svg>
                     <div>
-                      <h3 className="font-semibold mb-1">Quality Content</h3>
-                      <p className="text-blue-100 text-sm">Get high-quality, detailed reviews that showcase your products effectively</p>
+                      <h3 className="font-semibold mb-1">{t('forBrands.features.qualityContent.title')}</h3>
+                      <p className="text-blue-100 text-sm">{t('forBrands.features.qualityContent.description')}</p>
                     </div>
                   </div>
                 </div>
                 <a href="mailto:brands@trustme.com" className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-white text-blue-900 hover:bg-blue-50 h-14 rounded-xl px-10 text-lg">
-                  Learn More for Brands
+                  {t('forBrands.button')}
                 </a>
               </div>
             </div>
@@ -250,13 +253,13 @@ export default function LandingPage() {
         {/* Ready to Start Reviewing Section */}
         <section id="getting-started" className="py-20 bg-muted/30">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Start Reviewing?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">{t('readyToStart.title')}</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join thousands of reviewers who are already earning rewards and building their influence
+              {t('readyToStart.subtitle')}
             </p>
             <Link href="/views/pages/register/reviewer-register">
               <CommonButton
-                text="Get Started Today"
+                text={t('readyToStart.button')}
                 variant="primary"
                 size="lg"
                 shape="rounded"

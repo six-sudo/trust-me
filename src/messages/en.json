@@ -1,0 +1,107 @@
+{
+  "landing": {
+    "hero": {
+      "title": {
+        "line1": "Connect with Trusted Reviewers",
+        "line2": "Build Authentic Reviews"
+      },
+      "subtitle": "Join the platform where brands connect with verified reviewers to create authentic, trustworthy reviews that drive real business results.",
+      "buttons": {
+        "becomeReviewer": "Become a Reviewer",
+        "forBrands": "For Brands"
+      },
+      "stats": {
+        "activeReviewers": "Active Reviewers",
+        "partnerBrands": "Partner Brands",
+        "reviewsPosted": "Reviews Posted"
+      }
+    },
+    "whyJoin": {
+      "title": "Why Join TrustMe?",
+      "subtitle": "Discover the benefits of being part of our trusted reviewer community",
+      "cards": {
+        "freeProducts": {
+          "title": "Free Products & Services",
+          "description": "Get access to free products and services from top brands in exchange for honest, detailed reviews."
+        },
+        "earnRewards": {
+          "title": "Earn Rewards & Level Up",
+          "description": "Earn points, badges, and exclusive rewards as you build your reputation and complete more reviews."
+        },
+        "buildInfluence": {
+          "title": "Build Your Influence",
+          "description": "Grow your social media presence and become a trusted voice in your niche through authentic reviews."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Get started in just a few simple steps",
+      "steps": {
+        "signUp": {
+          "title": "Sign Up",
+          "description": "Create your account and complete your profile to get started"
+        },
+        "getVerified": {
+          "title": "Get Verified",
+          "description": "Complete our verification process to become a trusted reviewer"
+        },
+        "applyForGigs": {
+          "title": "Apply for Gigs",
+          "description": "Browse available review opportunities and apply for products you're interested in"
+        },
+        "reviewAndEarn": {
+          "title": "Review & Earn",
+          "description": "Write honest reviews and earn rewards for your valuable feedback"
+        }
+      }
+    },
+    "forBrands": {
+      "title": "For Brands",
+      "subtitle": "Connect with verified reviewers to get authentic reviews for your products",
+      "features": {
+        "verifiedReviewers": {
+          "title": "Verified Reviewers",
+          "description": "Work with authentic reviewers who have been verified for quality and reliability"
+        },
+        "targetedReach": {
+          "title": "Targeted Reach",
+          "description": "Reach your target audience through reviewers who match your ideal customer profile"
+        },
+        "qualityContent": {
+          "title": "Quality Content",
+          "description": "Get high-quality, detailed reviews that showcase your products effectively"
+        }
+      },
+      "button": "Learn More for Brands"
+    },
+    "readyToStart": {
+      "title": "Ready to Start Reviewing?",
+      "subtitle": "Join thousands of reviewers who are already earning rewards and building their influence",
+      "button": "Get Started Today"
+    }
+  },
+  "navbar": {
+    "menu": {
+      "forReviewers": "For Reviewers",
+      "forBrands": "For Brands",
+      "howItWorks": "How It Works",
+      "gettingStarted": "Getting Started"
+    },
+    "buttons": {
+      "signIn": "Sign In",
+      "signOut": "Sign Out"
+    },
+    "settings": {
+      "profile": "Profile",
+      "settings": "Settings",
+      "helpSupport": "Help & Support",
+      "theme": "Theme",
+      "language": "Language"
+    },
+    "languages": {
+      "en": "English",
+      "th": "ไทย"
+    }
+  }
+}
